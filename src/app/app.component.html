@@ -1,0 +1,28 @@
+<form class="ui large form segment">
+  <h3 class="ui header">Add a room</h3>
+  <div class="field">
+    <label for="name">Name:</label>
+    <input name="name" id="name" #newname>
+  </div>
+  <br>
+  <div class="field">
+    <label for="type">Type:</label>
+    <input name="type" id="type" #newtype>
+  </div>
+  <br>
+  <div class="field">
+    <label for="id">Id:</label>
+    <input name="id" id="id" #newid> 
+  </div>
+  <br>
+  <div class="field">
+    <label for="price">Price:</label>
+    <input name="price" id="price" #newprice> 
+  </div>
+  <br>
+  <button (click)="addRoom(newid,newname, newtype, newprice)" class="ui positive right floated button">Submit room</button>
+</form>
+<div class="ui grid posts">
+  <app-room *ngFor="let room of rooms" [room]="room"></app-room> 
+
+</div>
